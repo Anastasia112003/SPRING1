@@ -14,7 +14,7 @@ public class MainServlet extends HttpServlet {
   public static final String APID = "/api/posts/\\d+";
   public static final String STR  = "/";
 
-    @Override
+   @Override
     public void init() {
         final var context = new AnnotationConfigApplicationContext("ru.netology");
         postController = context.getBean(PostController.class);
