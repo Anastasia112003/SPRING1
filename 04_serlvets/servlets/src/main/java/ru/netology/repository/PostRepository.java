@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
-
+@Repository
 public class PostRepository {
   ConcurrentHashMap<Long,Post> allPosts;
   AtomicLong counter = new AtomicLong();
