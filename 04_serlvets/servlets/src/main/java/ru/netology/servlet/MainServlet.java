@@ -14,12 +14,13 @@ public class MainServlet extends HttpServlet {
   public static final String APID = "/api/posts/\\d+";
   public static final String STR  = "/";
 
-  @Override
-  public void init() {
-    final var context = new AnnotationConfigApplicationContext("ru.netology");
-    controller = context.getBean(PostController.class);
-  }
+ @Override
+    public void init() {
+        final var context = new AnnotationConfigApplicationContext("ru.netology");
+        postController = context.getBean(PostController.class);
+    }
 
+  
   @Override
   protected void service(HttpServletRequest req, HttpServletResponse resp) {
     // если деплоились в root context, то достаточно этого
